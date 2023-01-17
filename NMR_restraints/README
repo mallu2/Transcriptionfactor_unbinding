@@ -1,0 +1,2 @@
+The NMR distance and dihedral angle have been generated with https://github.com/dspoel/nmr2gmxpy.
+They have been modified accroding to a mutation in the NMR structure which is the mutation of valine 52 to cystein. The adjusted restraints match the sequence of the protein with the valine in position 52.

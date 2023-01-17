@@ -1,0 +1,7 @@
+Input files with parameters for preparation of and running the molecular dynamics simulations with GROMACS. 
+ions.mdp places ions using steepest descent optimization
+minim.mdp minimizes the energy of the structure using steepest descent minimization
+nvt.mdp contains the parameters for a simulation in the NVT ensemble where the protein is kept fixed. The system is heated to 310 K.
+npt.mdp eqeuilibrates the system to T=310 K and P=1 bar.
+The equilibration steps are doe using the V-scale thermostat und the Berendsen barostat with respective time constants of 0.1 and 2 ps. 
+

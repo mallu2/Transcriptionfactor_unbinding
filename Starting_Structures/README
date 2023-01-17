@@ -1,0 +1,2 @@
+The starting structures are based on the crystal structure with the PDB ID 1EFA that contains the specific DNA sequence OSymL. The structure has been modified by removing the ligand ONPF and by adding a part of the DNA to complete the 20 bp operator and add two additional CG basepairs at the termini to prevent large end-effects in the operator itself.
+The starting structure with the nonspecific sequence NOD has been produced from the crystal based specific complex by changing the DNA bases in place using pymol in the script base_mutator.py.
