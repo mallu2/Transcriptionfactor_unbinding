@@ -1,0 +1,7 @@
+On 12 April 2020 at 17:25:50
+-----------------------------
+
+The data is downloaded from the server: ftp.rcsb.org.
+
+Call for GROMACS:
+cd 1OSL/; gmx_mpi pdb2gmx -f 1OSL.pdb -p 1OSL.top -o 1OSL.gro -ff amber99sb-ildn -water tip3p -ignh -merge all 

@@ -1,0 +1,19 @@
+; Created automaticaly for this topology: 1OSL/1OSL.top.
+; Add what is written in this file to your .mdp file for including constraints
+; in your MD calculations. Here are listed all the NMR parameters.
+; We suggest to not change them unless you know what you do.
+
+; NMR refinement stuff 
+; Distance restraints type: No, Simple or Ensemble
+disre                    = Simple
+; Force weighting of pairs in one distance restraint: Conservative or Equal
+disre-weighting          = Conservative
+; Use sqrt of the time averaged times the instantaneous violation
+disre-mixed              = no
+disre-fc                 = 1000
+disre-tau                = 0
+; Output frequency for pair distances to energy file
+nstdisreout              = 0
+
+; Dihedral restraints do not required any parameters. It is enough to include them in topology.
+
