@@ -36,7 +36,7 @@ if [ "$3" == "solvate" ]; then
 
 	cp ../00-topo/${protein}.top .
 	cp ../00-topo/${protein}*.itp .
-	cp ../00-topo/amber99sbws.ff/tip4p2005.gro .
+	cp ../00-topo/amber99sbws_mod_K.ff/tip4p2005.gro .
 	cp ../00-topo/${protein}_proc.gro .
 	gmx_mpi editconf -f ${protein}_proc.gro -o ${protein}_newbox.gro -d 1.0 -bt dodecahedron 
 	### boxtypes: cubic, triclinic, octahedron, dodecahedron
@@ -96,12 +96,12 @@ if [ "$3" == "nvt" ]; then
         cd 04-nvt/
 
 	cp ../$GMX_settings/nvt.mdp .
+	cp ../$GMX_settings/sub_nvt.sh .
 	cp ../03-min/${protein}.top .
 	cp ../03-min/min.gro .
 	cp ../00-topo/*.itp .
 	
-	gmx_mpi make_ndx -f min.gro -o Protein_DNA.ndx
-	gmx_mpi grompp -f nvt.mdp -c min.gro -r min.gro -p ${protein}.top -o nvt.tpr -n Protein_DNA.ndx
+	gmx_mpi grompp -f nvt.mdp -c min.gro -r min.gro -p ${protein}.top -o nvt.tpr
 	
 	cd ..
 fi
