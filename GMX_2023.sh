@@ -116,11 +116,11 @@ fi
 if [ "$3" == "npt" ]; then
         cd 05-npt/
 	cp ../$GMX_settings/npt.mdp . 
+	cp ../$GMX_settings/sub_npt.sh . 
 	cp ../04-nvt/${protein}.top .
 	cp ../04-nvt/nvt.gro .
 	cp ../04-nvt/nvt.cpt .
 	cp ../04-nvt/*itp .
-	cp ../04-nvt/*ndx .
 	
 	gmx_mpi grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p ${protein}.top -o npt.tpr
 	cd ..
@@ -130,16 +130,15 @@ fi
 #gmx_mpi energy -f npt.edr -o ${protein}_npt_density.xvg
 
 
-echo "prepare folder 1 with topology and DNA_bonds.itp!"
+echo "prepare folder 1 with topology and DNA_bonds.itp and NMR restraint files!"
 
 if [ "$3" == "prod" ]; then
         cd 06-prod
 	for i in 1 2 3 4 5  
         do
-       		mkdir $i 
 		cp -r ../06-topo $i
        		cd $i
-       		cp ../../$GMX_settings/md_prod.mdp . 
+       		cp ../../$GMX_settings/md_prod_NMR.mdp . 
        		cp ../../05-npt/npt.gro .
        		cp ../../05-npt/npt.cpt .
        		cp ../../05-npt/*itp .
