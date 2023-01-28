@@ -8,7 +8,7 @@
 
 
 #load modules
-module load GROMACS
+module load GROMACS/2019.6-nsc1-gcc-7.3.0-bare
 
 #run gromacs parallel
 mpprun gmx_mpi mdrun -v -deffnm npt
