@@ -1,9 +1,9 @@
 #!/bin/bash -l
 
-#SBATCH -A 
+#SBATCH -A SNIC2022-3-26  
 #SBATCH -N 1
 #SBATCH -n 32
-#SBATCH -t 7-00:00:00
+#SBATCH -t 4-00:00:00
 #SBATCH -J md_1EFA_Rest
 
 #load modules
