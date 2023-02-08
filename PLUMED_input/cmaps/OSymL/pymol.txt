@@ -1,0 +1,14 @@
+sele pk1, id 82 or id 10596
+sele pk2, id 101 or id 10601
+sele pk3, id 240 or id 11198
+sele pk4, id 260 or id 10663
+sele pk5, id 302 or id 10626
+sele pk6, id 325 or id 11136
+sele pk7, id 418 or id 11069
+sele pk8, id 5167 or id 11357
+sele pk9, id 5186 or id 11362
+sele pk10, id 5325 or id 10440
+sele pk11, id 5345 or id 11424
+sele pk12, id 5387 or id 11389
+sele pk13, id 5410 or id 10372
+sele pk14, id 5516 or id 10340

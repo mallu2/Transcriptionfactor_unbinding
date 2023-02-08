@@ -1,0 +1,1 @@
+Output from scripts/write_cmap_heavy_atoms_specific_and_hinge.ipynb
