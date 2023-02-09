@@ -1,0 +1,1 @@
+The NMR distance and dihedral angle have been generated with https://github.com/dspoel/nmr2gmxpy. They were generated for one chain of the dimer. The restraint file for the use on the dimeric repressor has been modified with the script in Edit_NMR_Restraints. 
