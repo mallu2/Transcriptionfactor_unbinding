@@ -1,0 +1,2 @@
+Script to edit the NMR restraint files.
+The restraint files in the out folder have been modified for a mutation in the NMR structure which is the mutation of valine 52 to cystein. They also have been adjusted because of the protonation of His29 that and for two monomers that we include in our simulations. The adjusted restraints match the atom IDs of the dimeric repressor that can be found in the crystal structure with PDB ID 1EFA.
