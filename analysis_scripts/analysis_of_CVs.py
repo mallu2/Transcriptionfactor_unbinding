@@ -60,7 +60,7 @@ def CVs_replicas(folder, N_replica, path_ana = False ):
             Cv_N = read_CVs(folder+'{}/'.format(i))
     
         Cv_N["Time (ns)"] = Cv_N["Time (ps)"]/1000
-        Cv_N["replica"] = [i for x in range(len(Cv_N))]
+        Cv_N["Replica"] = [i for x in range(len(Cv_N))]
         Cv_N["Hinge DNA\nDistance (nm)"] = (Cv_N["Distance Hinge A to DNA (nm)"]+Cv_N["Distance Hinge A to DNA (nm)"])/2
 
         CVs.append(Cv_N)
@@ -90,7 +90,7 @@ def plot_hbonds(folder, N_replica, path_ana = False):
     else:
         hbonds = plotting_gmx.plot_hb_num(folder + "1/ana/" )[1]
     
-    hbonds['replica'] = [1 for x in range(len(hbonds))]
+    hbonds['Replica'] = [1 for x in range(len(hbonds))]
     hbonds['Time (ns)'] = hbonds['Time (ps)']/1000
     hbonds.rename(columns={"h-bonds":"Protein-DNA H-Bonds"}, inplace=True)
     for i in np.arange(2,N_replica+1,1):
@@ -99,7 +99,7 @@ def plot_hbonds(folder, N_replica, path_ana = False):
         else:
             hbonds_n = plotting_gmx.plot_hb_num(folder+'{}/ana/'.format(i))[1]
         hbonds_n['Time (ns)'] = hbonds_n['Time (ps)']/1000
-        hbonds_n['replica'] = [i for x in range(len(hbonds_n))]
+        hbonds_n['Replica'] = [i for x in range(len(hbonds_n))]
         hbonds_n.rename(columns={"h-bonds":"Protein-DNA H-Bonds"}, inplace=True)
         hbonds = hbonds.append(hbonds_n)
     plt.show()
@@ -125,11 +125,11 @@ def get_mean_hist(data, feature, bindef, frames=None):
         histogram for a value split into a certain bin range."""
         
     hist_rep = []
-    for i in np.array(data["replica"][0]):
+    for i in np.array(data["Replica"][0]):
         if frames:
-            hist, y  = np.histogram(data[(data["replica"] == i) & (data["Time (ps)"] >= frames)][feature],bins = bindef, density = True)
+            hist, y  = np.histogram(data[(data["Replica"] == i) & (data["Time (ps)"] >= frames)][feature],bins = bindef, density = True)
         else:
-            hist, y  = np.histogram(data[(data["replica"] == i)][feature],\
+            hist, y  = np.histogram(data[(data["Replica"] == i)][feature],\
                  bins = bindef, density = True)
         hist_rep.append(hist)
         
