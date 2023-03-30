@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
-sys.path.append("/home/malinlu/elflab/Projects/MD_lacI/") #for the RMSD plotting function
-from gmx_tool import plotting_gmx
+from analysis_scripts import plotting_gmx
 
 def read_CVs(folder):
     """Read the PLUMED output file produced by plumed_print.dat into a pandas DataFrame.
@@ -26,10 +25,10 @@ def read_CVs(folder):
            'Distance Hinge A to DNA (nm)',\
            'Distance Hinge B to DNA (nm)', 'Specific Contacts', 'Hinge Helix Contacts'])
     
-    cmap_sum = pd.read_csv(folder + "distances", sep='\s+', skiprows=1, \
-    names=['Time (ps)', 'dist1', 'dist2', 'dist3', 'dist4', 'dist5', 'dist6', 'dist7', \
-           'dist8', 'dist9', 'dist10', 'dist11', 'dist12', 'dist13', 'dist14', 'dist15', \
-           'dist16', 'dist17', 'dist18', 'dist19', 'dist20', 'dist21'])
+    # cmap_sum = pd.read_csv(folder + "distances", sep='\s+', skiprows=1, \
+    # names=['Time (ps)', 'dist1', 'dist2', 'dist3', 'dist4', 'dist5', 'dist6', 'dist7', \
+    #       'dist8', 'dist9', 'dist10', 'dist11', 'dist12', 'dist13', 'dist14', 'dist15', \
+    #       'dist16', 'dist17', 'dist18', 'dist19', 'dist20', 'dist21'])
     
     CVs["DNA Bent (deg)"] = (-1)*(((CVs['DNA bent (rad)']/(np.pi))*180)-180)
 
@@ -167,7 +166,7 @@ def Write_Probability_Data_Frame(CVs, CV, bin_range, plot_t="bar",figsize=(2.2,1
     If paths are specified the plots can be saved as image files.
     """
 
-    ub = get_mean_hist(CVs[CVs["Simulation"] == "Unbiased , OSymL"], CV, bin_range)
+    ub = get_mean_hist(CVs[CVs["Simulation"] == "Unbiased, OSymL"], CV, bin_range)
     SymL = get_mean_hist(CVs[CVs["Simulation"] == "MetaD, OSymL"], CV, bin_range)
     NMR = get_mean_hist(CVs[CVs["Simulation"] == "NMR, OSymL"], CV, bin_range, frames=250000)
     
@@ -178,7 +177,7 @@ def Write_Probability_Data_Frame(CVs, CV, bin_range, plot_t="bar",figsize=(2.2,1
                   [x for y in ub for x in y]+\
                                        [x for y in SymL for x in y]+\
                        [x for y in NMR for x in y],\
-                 CV: [x for y in [bin_range[1:] for x in range(13)] for x in y]})
+                 CV: [x for y in [bin_range[1:] for x in range(11)] for x in y]})
     
     ax = sns.set_context("paper", font_scale=1, rc={"lines.linewidth": 1}) #font size is 10
     
@@ -198,7 +197,7 @@ def Write_Probability_Data_Frame(CVs, CV, bin_range, plot_t="bar",figsize=(2.2,1
            
     if plot_t=="line":
         df.drop(columns=CV)
-        df[CV]=[x for y in [bin_range[:-1] for x in range(13)] for x in y]
+        df[CV]=[x for y in [bin_range[:-1] for x in range(11)] for x in y]
         sns.lineplot(data = df, y="Probability", x=CV, hue = "Simulation",\
                 hue_order=["MetaD, OSymL","Unbiased, OSymL", "NMR, OSymL"], ci=68, \
                 palette=["purple", "cyan", "brown"], style="Simulation")
