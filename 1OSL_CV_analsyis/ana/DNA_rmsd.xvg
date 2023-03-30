@@ -1,0 +1,38 @@
+# This file was created Thu Mar 30 10:44:29 2023
+# Created by:
+#                       :-) GROMACS - gmx rms, 2019.6 (-:
+# 
+# Executable:   /software/sse/manual/GROMACS/2019.6/g73/nsc1/bin/gmx_mpi
+# Data prefix:  /software/sse/manual/GROMACS/2019.6/g73/nsc1
+# Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis
+# Command line:
+#   gmx_mpi rms -f 1osl_C52V_GMX_new_numbering.pdb -s 1osl_C52V_GMX_new_numbering_f1.pdb -o DNA_rmsd.xvg
+# gmx rms is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "DNA after lsq fit to Protein"
+   0.0000000    0.0000002
+   0.0000000    0.3053734
+   0.0000000    0.8278291
+   0.0000000    0.8703776
+   0.0000000    0.4735480
+   0.0000000    0.3858842
+   0.0000000    0.3074884
+   0.0000000    0.6528903
+   0.0000000    0.9123978
+   0.0000000    0.4501097
+   0.0000000    0.3889007
+   0.0000000    0.7071899
+   0.0000000    0.5932350
+   0.0000000    0.2510465
+   0.0000000    0.4201306
+   0.0000000    0.7811953
+   0.0000000    0.3897056
+   0.0000000    0.5807242
+   0.0000000    0.8683844
+   0.0000000    0.3358209

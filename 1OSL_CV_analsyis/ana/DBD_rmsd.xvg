@@ -1,0 +1,38 @@
+# This file was created Thu Mar 30 10:44:28 2023
+# Created by:
+#                       :-) GROMACS - gmx rms, 2019.6 (-:
+# 
+# Executable:   /software/sse/manual/GROMACS/2019.6/g73/nsc1/bin/gmx_mpi
+# Data prefix:  /software/sse/manual/GROMACS/2019.6/g73/nsc1
+# Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis
+# Command line:
+#   gmx_mpi rms -f 1osl_C52V_GMX_new_numbering.pdb -s 1osl_C52V_GMX_new_numbering_f1.pdb -o DBD_rmsd.xvg
+# gmx rms is part of G R O M A C S:
+#
+# GROningen MAchine for Chemical Simulation
+#
+@    title "RMSD"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "Protein after lsq fit to Protein"
+   0.0000000    0.0000002
+   0.0000000    0.8577794
+   0.0000000    0.8858095
+   0.0000000    0.9134717
+   0.0000000    0.8523647
+   0.0000000    0.8944914
+   0.0000000    0.7731341
+   0.0000000    0.9734668
+   0.0000000    1.0630898
+   0.0000000    0.8975630
+   0.0000000    1.0015831
+   0.0000000    0.8959130
+   0.0000000    1.0298258
+   0.0000000    0.7125782
+   0.0000000    1.2201383
+   0.0000000    1.0935527
+   0.0000000    0.9271051
+   0.0000000    0.9307960
+   0.0000000    1.1295254
+   0.0000000    0.8749971

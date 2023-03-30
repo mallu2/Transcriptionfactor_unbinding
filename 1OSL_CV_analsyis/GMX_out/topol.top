@@ -1,0 +1,203 @@
+;
+;	File 'topol.top' was generated
+;	By user: x_mallu (6174)
+;	On host: tetralith1.nsc.liu.se
+;	At date: Thu Mar 16 10:36:24 2023
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                :-) GROMACS - gmx pdb2gmx, 2021.3-MODIFIED (-:
+;	
+;	Executable:   /software/sse/manual/GROMACS/2021.3/g93/nsc1/bin/gmx_mpi
+;	Data prefix:  /software/sse/manual/GROMACS/2021.3/g93/nsc1
+;	Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis
+;	Command line:
+;	  gmx_mpi pdb2gmx -ignh -f 1osl_C52V_ILE11.pdb -o 1osl_C52V_GMX.pdb
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./amber99sbws.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_DNA_chain_C.itp"
+#include "topol_DNA_chain_D.itp"
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+#include "topol_DNA_chain_C2.itp"
+#include "topol_DNA_chain_D2.itp"
+#include "topol_Protein_chain_A2.itp"
+#include "topol_Protein_chain_B2.itp"
+#include "topol_DNA_chain_C3.itp"
+#include "topol_DNA_chain_D3.itp"
+#include "topol_Protein_chain_A3.itp"
+#include "topol_Protein_chain_B3.itp"
+#include "topol_DNA_chain_C4.itp"
+#include "topol_DNA_chain_D4.itp"
+#include "topol_Protein_chain_A4.itp"
+#include "topol_Protein_chain_B4.itp"
+#include "topol_DNA_chain_C5.itp"
+#include "topol_DNA_chain_D5.itp"
+#include "topol_Protein_chain_A5.itp"
+#include "topol_Protein_chain_B5.itp"
+#include "topol_DNA_chain_C6.itp"
+#include "topol_DNA_chain_D6.itp"
+#include "topol_Protein_chain_A6.itp"
+#include "topol_Protein_chain_B6.itp"
+#include "topol_DNA_chain_C7.itp"
+#include "topol_DNA_chain_D7.itp"
+#include "topol_Protein_chain_A7.itp"
+#include "topol_Protein_chain_B7.itp"
+#include "topol_DNA_chain_C8.itp"
+#include "topol_DNA_chain_D8.itp"
+#include "topol_Protein_chain_A8.itp"
+#include "topol_Protein_chain_B8.itp"
+#include "topol_DNA_chain_C9.itp"
+#include "topol_DNA_chain_D9.itp"
+#include "topol_Protein_chain_A9.itp"
+#include "topol_Protein_chain_B9.itp"
+#include "topol_DNA_chain_C10.itp"
+#include "topol_DNA_chain_D10.itp"
+#include "topol_Protein_chain_A10.itp"
+#include "topol_Protein_chain_B10.itp"
+#include "topol_DNA_chain_C11.itp"
+#include "topol_DNA_chain_D11.itp"
+#include "topol_Protein_chain_A11.itp"
+#include "topol_Protein_chain_B11.itp"
+#include "topol_DNA_chain_C12.itp"
+#include "topol_DNA_chain_D12.itp"
+#include "topol_Protein_chain_A12.itp"
+#include "topol_Protein_chain_B12.itp"
+#include "topol_DNA_chain_C13.itp"
+#include "topol_DNA_chain_D13.itp"
+#include "topol_Protein_chain_A13.itp"
+#include "topol_Protein_chain_B13.itp"
+#include "topol_DNA_chain_C14.itp"
+#include "topol_DNA_chain_D14.itp"
+#include "topol_Protein_chain_A14.itp"
+#include "topol_Protein_chain_B14.itp"
+#include "topol_DNA_chain_C15.itp"
+#include "topol_DNA_chain_D15.itp"
+#include "topol_Protein_chain_A15.itp"
+#include "topol_Protein_chain_B15.itp"
+#include "topol_DNA_chain_C16.itp"
+#include "topol_DNA_chain_D16.itp"
+#include "topol_Protein_chain_A16.itp"
+#include "topol_Protein_chain_B16.itp"
+#include "topol_DNA_chain_C17.itp"
+#include "topol_DNA_chain_D17.itp"
+#include "topol_Protein_chain_A17.itp"
+#include "topol_Protein_chain_B17.itp"
+#include "topol_DNA_chain_C18.itp"
+#include "topol_DNA_chain_D18.itp"
+#include "topol_Protein_chain_A18.itp"
+#include "topol_Protein_chain_B18.itp"
+#include "topol_DNA_chain_C19.itp"
+#include "topol_DNA_chain_D19.itp"
+#include "topol_Protein_chain_A19.itp"
+#include "topol_Protein_chain_B19.itp"
+#include "topol_DNA_chain_C20.itp"
+#include "topol_DNA_chain_D20.itp"
+#include "topol_Protein_chain_A20.itp"
+#include "topol_Protein_chain_B20.itp"
+
+; Include water topology
+#include "./amber99sbws.ff/tip4p2005s.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./amber99sbws.ff/ions.itp"
+
+[ system ]
+; Name
+1osl_0020
+
+[ molecules ]
+; Compound        #mols
+DNA_chain_C         1
+DNA_chain_D         1
+Protein_chain_A     1
+Protein_chain_B     1
+DNA_chain_C2        1
+DNA_chain_D2        1
+Protein_chain_A2     1
+Protein_chain_B2     1
+DNA_chain_C3        1
+DNA_chain_D3        1
+Protein_chain_A3     1
+Protein_chain_B3     1
+DNA_chain_C4        1
+DNA_chain_D4        1
+Protein_chain_A4     1
+Protein_chain_B4     1
+DNA_chain_C5        1
+DNA_chain_D5        1
+Protein_chain_A5     1
+Protein_chain_B5     1
+DNA_chain_C6        1
+DNA_chain_D6        1
+Protein_chain_A6     1
+Protein_chain_B6     1
+DNA_chain_C7        1
+DNA_chain_D7        1
+Protein_chain_A7     1
+Protein_chain_B7     1
+DNA_chain_C8        1
+DNA_chain_D8        1
+Protein_chain_A8     1
+Protein_chain_B8     1
+DNA_chain_C9        1
+DNA_chain_D9        1
+Protein_chain_A9     1
+Protein_chain_B9     1
+DNA_chain_C10       1
+DNA_chain_D10       1
+Protein_chain_A10     1
+Protein_chain_B10     1
+DNA_chain_C11       1
+DNA_chain_D11       1
+Protein_chain_A11     1
+Protein_chain_B11     1
+DNA_chain_C12       1
+DNA_chain_D12       1
+Protein_chain_A12     1
+Protein_chain_B12     1
+DNA_chain_C13       1
+DNA_chain_D13       1
+Protein_chain_A13     1
+Protein_chain_B13     1
+DNA_chain_C14       1
+DNA_chain_D14       1
+Protein_chain_A14     1
+Protein_chain_B14     1
+DNA_chain_C15       1
+DNA_chain_D15       1
+Protein_chain_A15     1
+Protein_chain_B15     1
+DNA_chain_C16       1
+DNA_chain_D16       1
+Protein_chain_A16     1
+Protein_chain_B16     1
+DNA_chain_C17       1
+DNA_chain_D17       1
+Protein_chain_A17     1
+Protein_chain_B17     1
+DNA_chain_C18       1
+DNA_chain_D18       1
+Protein_chain_A18     1
+Protein_chain_B18     1
+DNA_chain_C19       1
+DNA_chain_D19       1
+Protein_chain_A19     1
+Protein_chain_B19     1
+DNA_chain_C20       1
+DNA_chain_D20       1
+Protein_chain_A20     1
+Protein_chain_B20     1

@@ -1,0 +1,10 @@
+1osl_C52V.pdb has been produced with PyMOL by mutating the two Cys52 back to Val52.
+There is one mistake in mode 11 ILE48 in the PDB structure that has also been fixed in PyMOL.
+
+To have at least equivalent atom names and order of atoms, the pdb file has been converted with GROMACS pdb2gmx:
+gmx_mpi pdb2gmx -ignh -f 1osl_C52V_ILE11.pdb -o 1osl_C52V_GMX.pdb
+
+The numbering in the files has the been changed, to have consecutive residue IDs that were equal for each mode.
+The result from all the preperation steps is 1osl_C52V_GMX_new_numbering.pdb
+
+1osl_C52V_GMX_new_numbering_f1.pdb contains the first frame as reference pdb file for PLUMED analysis.

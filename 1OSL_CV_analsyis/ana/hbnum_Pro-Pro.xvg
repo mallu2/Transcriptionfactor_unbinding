@@ -1,0 +1,45 @@
+# This file was created Thu Mar 30 10:55:18 2023
+# Created by:
+#                  :-) GROMACS - gmx hbond, 2021.3-MODIFIED (-:
+# 
+# Executable:   /software/sse/manual/GROMACS/2021.3/g93/nsc1/bin/gmx_mpi
+# Data prefix:  /software/sse/manual/GROMACS/2021.3/g93/nsc1
+# Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis
+# Command line:
+#   gmx_mpi hbond -f 1osl_C52V_GMX_new_numbering.xtc -s 1osl_C52V_GMX_nn_f1.tpr -num hbnum_Pro-Pro.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# GRoups of Organic Molecules in ACtion for Science
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0          96         925
+         0         103         965
+         0          87         884
+         0          91         954
+         0          86         946
+         0          99         891
+         0          94         920
+         0          91         958
+         0          96         971
+         0          99         956
+         0          96         944
+         0          95         891
+         0         114         917
+         0          95         848
+         0         107         950
+         0          98         937
+         0          96         935
+         0          90         858
+         0         112         953
+         0          96         897

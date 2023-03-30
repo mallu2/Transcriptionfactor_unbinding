@@ -1,0 +1,1 @@
+The .tpr file fir the NMR structure needed to be written to perform h-bond analysis. Therefore a gro file has been made and a box has been added to finally write a tpr file. To analyse the NMR structure, the pdb fromat needs to be written into xtc format.

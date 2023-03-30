@@ -1,0 +1,51 @@
+;
+;	File 'topol.top' was generated
+;	By user: x_mallu (6174)
+;	On host: tetralith1.nsc.liu.se
+;	At date: Thu Mar 23 13:58:07 2023
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                :-) GROMACS - gmx pdb2gmx, 2021.3-MODIFIED (-:
+;	
+;	Executable:   /software/sse/manual/GROMACS/2021.3/g93/nsc1/bin/gmx_mpi
+;	Data prefix:  /software/sse/manual/GROMACS/2021.3/g93/nsc1
+;	Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis/write_tpr_file
+;	Command line:
+;	  gmx_mpi pdb2gmx -f 1osl_C52V_GMX_new_numbering_f1.pdb -o 1osl_C52V_GMX_new_numbering_f1.gro
+;	Force field was read from current directory or a relative path - path added.
+;
+
+; Include forcefield parameters
+#include "./amber99sbws.ff/forcefield.itp"
+
+; Include chain topologies
+#include "topol_DNA_chain_C.itp"
+#include "topol_DNA_chain_D.itp"
+#include "topol_Protein_chain_A.itp"
+#include "topol_Protein_chain_B.itp"
+
+; Include water topology
+#include "./amber99sbws.ff/tip4p2005s.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "./amber99sbws.ff/ions.itp"
+
+[ system ]
+; Name
+1osl_0020
+
+[ molecules ]
+; Compound        #mols
+DNA_chain_C         1
+DNA_chain_D         1
+Protein_chain_A     1
+Protein_chain_B     1

@@ -1,0 +1,45 @@
+# This file was created Thu Mar 30 10:51:45 2023
+# Created by:
+#                  :-) GROMACS - gmx hbond, 2021.3-MODIFIED (-:
+# 
+# Executable:   /software/sse/manual/GROMACS/2021.3/g93/nsc1/bin/gmx_mpi
+# Data prefix:  /software/sse/manual/GROMACS/2021.3/g93/nsc1
+# Working dir:  /proj/snic2020-5-374/users/x_mallu/1OSL_CV_analsyis
+# Command line:
+#   gmx_mpi hbond -f 1osl_C52V_GMX_new_numbering.xtc -s 1osl_C52V_GMX_nn_f1.tpr -num hbnum_DNA-Pro.xvg
+# gmx hbond is part of G R O M A C S:
+#
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
+#
+@    title "Hydrogen Bonds"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Number"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Hydrogen bonds"
+@ s1 legend "Pairs within 0.35 nm"
+         0          31         219
+         0          36         255
+         0          24         236
+         0          23         236
+         0          35         266
+         0          24         226
+         0          24         228
+         0          25         224
+         0          25         215
+         0          32         230
+         0          29         269
+         0          22         214
+         0          22         233
+         0          24         213
+         0          36         252
+         0          23         290
+         0          30         234
+         0          26         224
+         0          24         207
+         0          30         253
