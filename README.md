@@ -46,3 +46,8 @@ AMBER99sbws force field with potassium parameters from Dang, Liem X., and Peter 
 Analysis_Scripts
 ----------------
 Scripts for the analysis and plotting of data from simulations either obtained from GROMACS or PLUMED functions.
+
+1OSL_CV_analsyis
+----------------
+Preparation of PDB file of the 1osl structure after mutating Cys52 back to Val52 and adjusting the atom names to the one used for the crystal structure to obtain PLUMED input files that can be used to analyse the NMR structure in the same way as the crystal structure and simulations.
+
