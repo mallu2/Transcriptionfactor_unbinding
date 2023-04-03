@@ -43,3 +43,6 @@ amber99sbws_mod_K.ff
 --------------------
 AMBER99sbws force field with potassium parameters from Dang, Liem X., and Peter A. Kollman. 1995. The Journal of Physical Chemistry 99 (1): 55–58.
 
+Analysis_Scripts
+----------------
+Scripts for the analysis and plotting of data from simulations either obtained from GROMACS or PLUMED functions.
