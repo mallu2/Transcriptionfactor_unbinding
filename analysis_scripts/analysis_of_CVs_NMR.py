@@ -95,6 +95,8 @@ def plot_hbonds(folder, N_replica, path_ana = False):
     
     if path_ana:
         hbonds = plotting_gmx.plot_hb_num(folder + "1/" + path_ana + "ana/" )[1]
+    elif N_replica == 1:
+        hbonds = plotting_gmx.plot_hb_num(folder + "ana/" )[1]
     else:
         hbonds = plotting_gmx.plot_hb_num(folder + "1/ana/" )[1]
     
