@@ -11,4 +11,6 @@ contains functions that read data from different simulations, calculated and plo
 analysis_of_CVs_NMR.py
 ----------------------
 s.o. but specifically for plots of NMR simulations.
-
+notebooks
+---------
+Contains Jupyter Notebooks 
