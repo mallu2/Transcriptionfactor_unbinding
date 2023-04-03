@@ -144,6 +144,8 @@ def Write_Probability_Data_Frame(CVs, CV, bin_range, plot_t="bar",figsize=(2.2,1
         dataframe with all the data
     CV : str
         feature that data should be histogrammed for.
+    NMR : pandas DataFrame
+        df with record from NMR structure.
     bin_range : numpy array
         array with bins used for creating the histogram.
     plot_t : str
@@ -209,11 +211,11 @@ def Write_Probability_Data_Frame(CVs, CV, bin_range, plot_t="bar",figsize=(2.2,1
         else:
             plt.xticks(np.arange(0,bin_range[-1]+1,1),np.arange(0,bin_range[-1]+1,1))
         plt.xlim(bin_range[0]-1/15,bin_range[-1]+1/15)
-
+    
     plt.legend([],[])
     if figure_path:
         plt.tight_layout()
-        plt.savefig(figure_path+'_{}'.format(CV), dpi=300)
+        plt.savefig(figure_path+'{}.pdf'.format(CV), dpi=300)
     plt.show()
     
     return(df)
