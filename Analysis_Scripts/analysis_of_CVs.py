@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import numpy as np
-from analysis_scripts import plotting_gmx
+from Analysis_Scripts import plotting_gmx
 
 def read_CVs(folder):
     """Read the PLUMED output file produced by plumed_print.dat into a pandas DataFrame.
