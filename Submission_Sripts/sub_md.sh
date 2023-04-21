@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-#SBATCH -A SNIC2022-3-26  
+#SBATCH -A  
 #SBATCH -N 1
 #SBATCH -n 32
 #SBATCH -t 4-00:00:00
