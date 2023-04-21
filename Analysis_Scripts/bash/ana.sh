@@ -1,12 +1,9 @@
 #!/bin/bash -l
-#SBATCH -A SNIC2021-3-8
-#SNIC2021-5-332
+#SBATCH -A 
 #SBATCH -N 1
 #SBATCH -n 1 
 #SBATCH -t 0:20:00
 #SBATCH -J ana
-#SBATCH --mail-type=fail
-#SBATCH --mail-user=malin.luking@icm.uu.se
 
 
 #get the concat trajectory, 10 offset
